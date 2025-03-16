@@ -19,7 +19,7 @@ export default function Home() {
     
 
     try {
-      const response = await fetch("https://s-querre-l-backend.vercel.app/generate-sql", {
+      const response = await fetch("https://eventsphere-backend.vercel.app/generate-sql", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
