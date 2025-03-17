@@ -27,7 +27,7 @@ export default function CodeTab({ code, setCode, setSchemaData ,setTableData}) {
       : "execute-sql"
 
     try {
-      const response = await fetch(`https://s-querre-l-backend.vercel.app/${endpoint}`, {
+      const response = await fetch(`https://eventsphere-backend.vercel.app//${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json",
         "Accept": "application/json"},
@@ -37,18 +37,18 @@ export default function CodeTab({ code, setCode, setSchemaData ,setTableData}) {
       const data = await response.json()
 
       // ✅ If schema & table name are returned, update schema data
-      if (data.schema && data.tableName) {
-        setSchemaData((prevSchema) => [
-          ...prevSchema,
-          { tableName: data.tableName, columns: data.schema }
-        ])
+      // if (data.schema && data.tableName) {
+      //   setSchemaData((prevSchema) => [
+      //     ...prevSchema,
+      //     { tableName: data.tableName, columns: data.schema }
+      //   ])
       
-      }
+      // }
       if (data.data && data.tableName && data.columns) {
         setTableData([
           {
             name: data.tableName,
-            columns: data.columns, 
+            // columns: data.columns, 
             rows: data.data        
           }
         ]);
