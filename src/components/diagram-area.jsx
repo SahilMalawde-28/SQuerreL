@@ -48,8 +48,11 @@ export default function DiagramArea({ zoom, tableData = [] }) {
       {/* Canvas with Grid Background */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{ transform: `scale(${zoom / 50})` }} />
 
-      {/* Table Display */}
-<div className="absolute inset-0 p-4 flex flex-wrap gap-6 items-center justify-center">
+     {/* Table Display */}
+<div
+  className="absolute inset-0 p-4 flex flex-wrap gap-6 items-center justify-center"
+  style={{ transform: `scale(${zoom / 50})`, transformOrigin: "center" }} // ✅ Apply zoom
+>
   {tableData.length > 0 ? (
     tableData.map((table, index) => (
       <div
