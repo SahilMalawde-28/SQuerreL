@@ -24,7 +24,7 @@ export default function Header({ onSchemaInspectorToggle }) {
             <path d="M18 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"></path>
           </svg>
         </div>
-        <h1 className={cn("text-green-500 font-bold text-xl")}>SQurreL</h1>
+        <h1 className={cn("text-green-500 font-bold text-xl")}>SQuerreL</h1>
         <div className="flex items-center ml-4">
           <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
           <span className="text-white text-sm">
