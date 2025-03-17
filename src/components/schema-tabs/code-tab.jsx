@@ -27,7 +27,7 @@ export default function CodeTab({ code, setCode, setSchemaData ,setTableData}) {
       : "execute-sql"
 
     try {
-      const response = await fetch(`https://eventsphere-backend.vercel.app//${endpoint}`, {
+      const response = await fetch(`https://eventsphere-backend.vercel.app/${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json",
         "Accept": "application/json"},
@@ -55,7 +55,7 @@ export default function CodeTab({ code, setCode, setSchemaData ,setTableData}) {
       }
       
 
-
+      alert("QUerry Successful,RUn select command to view table")
       console.log("Query Result:", data)
     } catch (error) {
       console.error("Error executing query:", error)
