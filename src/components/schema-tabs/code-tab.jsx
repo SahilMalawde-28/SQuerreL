@@ -55,9 +55,10 @@ export default function CodeTab({ code, setCode, setSchemaData ,setTableData}) {
       }
       
 
-      alert("Querry Successful!")
+      alert("Query Recieved!")
       console.log("Query Result:", data)
     } catch (error) {
+      alert("Error: " + error.message);
       console.error("Error executing query:", error)
     }
   }
