@@ -44,7 +44,7 @@ export default function CodeTab({ code, setCode, setSchemaData ,setTableData}) {
       //   ])
       
       // }
-      if (data.data && data.tableName && data.columns) {
+      if (data.data && data.tableName) {
         setTableData([
           {
             name: data.tableName,
