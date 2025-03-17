@@ -49,7 +49,7 @@ export default function DiagramArea({ zoom, tableData = [] }) {
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{ transform: `scale(${zoom / 50})` }} />
 
       {/* Table Display */}
-      <div className="absolute inset-0 p-4 flex flex-wrap gap-6 items-center justify-center">
+<div className="absolute inset-0 p-4 flex flex-wrap gap-6 items-center justify-center">
   {tableData.length > 0 ? (
     tableData.map((table, index) => (
       <div
@@ -60,35 +60,20 @@ export default function DiagramArea({ zoom, tableData = [] }) {
           {table.name || "Unnamed Table"}
         </h3>
 
-        {table.columns && table.columns.length > 0 ? (
+        {table.rows && table.rows.length > 0 ? (
           <table className="w-full text-white mt-3 text-sm border border-gray-700 rounded-md overflow-hidden">
-            <thead>
-              <tr className="bg-gray-800">
-                {table.columns.map((col, i) => (
-                  <th key={i} className="border border-gray-700 p-2">{col}</th>
-                ))}
-              </tr>
-            </thead>
             <tbody>
-              {table.rows && table.rows.length > 0 ? (
-                table.rows.map((row, i) => (
-                  <tr key={i} className="bg-gray-850 hover:bg-gray-800 transition">
-                    {row.map((cell, j) => (
-                      <td key={j} className="border border-gray-700 p-2">{cell}</td>
-                    ))}
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan={table.columns.length} className="text-gray-500 p-3 text-center">
-                    No Data Available
-                  </td>
+              {table.rows.map((row, i) => (
+                <tr key={i} className="bg-gray-850 hover:bg-gray-800 transition">
+                  {row.map((cell, j) => (
+                    <td key={j} className="border border-gray-700 p-2">{cell}</td>
+                  ))}
                 </tr>
-              )}
+              ))}
             </tbody>
           </table>
         ) : (
-          <p className="text-gray-400">No columns found</p>
+          <p className="text-gray-400 mt-2">No Data Available</p>
         )}
       </div>
     ))
@@ -96,6 +81,7 @@ export default function DiagramArea({ zoom, tableData = [] }) {
     <p className="text-gray-500 text-lg font-semibold">Run a SELECT command to see tables</p>
   )}
 </div>
+
 
     </div>
   );
