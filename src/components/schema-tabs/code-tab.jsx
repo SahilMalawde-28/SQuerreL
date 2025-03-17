@@ -55,7 +55,7 @@ export default function CodeTab({ code, setCode, setSchemaData ,setTableData}) {
       }
       
 
-      alert("QUerry Successful,RUn select command to view table")
+      alert("Querry Successful!")
       console.log("Query Result:", data)
     } catch (error) {
       console.error("Error executing query:", error)
