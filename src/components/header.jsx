@@ -2,13 +2,14 @@
 
 import { Settings } from "lucide-react"
 import { cn } from "../lib/utils"
+import squerrelLogo from "../public/squerrel_logo.png";
 
 export default function Header({ onSchemaInspectorToggle }) {
   return (
     <header className="flex items-center justify-between px-4 py-2 border-b border-gray-800">
       <div className="flex items-center">
         <div className="text-green-500 mr-2">
-            <img src="../public/squerrel_logo.png" alt="Description" width="24" height="24" />
+            <img src={squerrelLogo} alt="Description" width="24" height="24" />
             <path d="M8 9h8"></path>
             <path d="M8 13h6"></path>
             <path d="M18 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"></path>
