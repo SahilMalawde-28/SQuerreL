@@ -5,7 +5,7 @@ function Pricing() {
   return (
     <Navbar />
     <PricingPage />
-  )
+  );
 }
 
 export default Pricing
