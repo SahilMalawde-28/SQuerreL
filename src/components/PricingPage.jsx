@@ -5,7 +5,7 @@ function PricingPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <header className="border-b border-gray-800">
+{/*       <header className="border-b border-gray-800">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
@@ -54,7 +54,7 @@ function PricingPage() {
             </Link>
           </div>
         </div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
