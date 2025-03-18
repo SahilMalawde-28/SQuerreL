@@ -11,11 +11,11 @@ export default function Header({ onSchemaInspectorToggle }) {
         <div className="text-green-500 mr-2">
             <img src={squerrelLogo} alt="Description" width="24" height="24" />
         </div>
-        <h1 className={cn("text-green-500 font-bold text-xl")}>SquerreL</h1>
+        <h1 className={cn("text-green-500 font-bold text-xl")}>SQuerreL</h1>
         <div className="flex items-center ml-4">
           <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
           <span className="text-white text-sm">
-            Connected: <span className="text-green-500">ecommerce</span>
+            Connected: <span className="text-green-500">virtual db</span>
           </span>
         </div>
       </div>
