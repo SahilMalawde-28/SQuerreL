@@ -10,12 +10,5 @@ const router = createBrowserRouter([
   { path: "/pricing", element: <Pricing /> },
 ]);
 
-export default function App() {
-  (
-    <>
-      <Navbar />
-      <RouterProvider router={router} />
-    </>
-  );
-}
+export default function App() {<RouterProvider router={router} />;}
 
