@@ -10,5 +10,7 @@ const router = createBrowserRouter([
   { path: "/pricing", element: <Pricing /> },
 ]);
 
-export default function App() {<RouterProvider router={router} />;}
+export default function App() {
+  return <RouterProvider router={router} />;
+}
 
