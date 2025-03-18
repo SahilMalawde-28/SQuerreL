@@ -6,60 +6,7 @@ function PricingPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-<<<<<<< HEAD
-{/*       <header className="border-b border-gray-800">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-5 h-5 text-black"
-              >
-                <path d="M3 3h18v18H3z" />
-                <path d="M8 12h8" />
-                <path d="M12 8v8" />
-              </svg>
-            </div>
-            <span className="text-xl font-bold">SQuerrel</span>
-          </div>
-
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/features" className="text-gray-300 hover:text-white transition-colors">
-              Features
-            </Link>
-            <Link to="/how-it-works" className="text-gray-300 hover:text-white transition-colors">
-              How it Works
-            </Link>
-            <Link to="/examples" className="text-gray-300 hover:text-white transition-colors">
-              Examples
-            </Link>
-            <Link to="/pricing" className="text-white font-medium">
-              Pricing
-            </Link>
-          </nav>
-
-          <div className="flex items-center space-x-4">
-            <Link to="/signin" className="text-gray-300 hover:text-white transition-colors">
-              Sign In
-            </Link>
-            <Link
-              to="/page"
-              className="bg-green-500 hover:bg-green-600 text-black font-medium px-4 py-2 rounded-md transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </header> */}
-=======
       <Navbar />
->>>>>>> e7c5538 (Navbar inconsistency fixed)
 
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
