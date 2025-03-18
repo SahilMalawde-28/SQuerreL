@@ -4,8 +4,9 @@ import Header from "../components/header";
 import SchemaInspector from "../components/schema-inspector";
 import PromptInput from "../components/prompt-input";
 import DiagramArea from "../components/diagram-area";
+import { SparklesCore } from "../components/sparkles";
 
-export default function Home() {
+export default function Page() {
   const [zoom, setZoom] = useState(50);
   const [showSchemaInspector, setShowSchemaInspector] = useState(false);
   const [showSqlEditor, setShowSqlEditor] = useState(false);

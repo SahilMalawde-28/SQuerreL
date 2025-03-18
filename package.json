@@ -10,9 +10,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/runtime": "^7.26.10",
+    "ajv": "^8.17.1",
+    "body-parser": "^1.20.3",
+    "cookie": "^1.0.2",
+    "css": "^3.0.0",
+    "express": "^4.21.2",
+    "framer-motion": "^12.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
     "lucide-react": "^0.482.0",
+    "moment": "^2.30.1",
+    "path-to-regexp": "^8.2.0",
+    "qs": "^6.14.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router": "^7.3.0",
+    "react-router-dom": "^7.3.0",
+    "send": "^1.1.0",
+    "serve-static": "^1.16.2",
+    "ws": "^8.18.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
