@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom"
 import { Check } from "lucide-react"
+import Navbar from "./navbar"
 
 function PricingPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
+<<<<<<< HEAD
 {/*       <header className="border-b border-gray-800">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -55,6 +57,9 @@ function PricingPage() {
           </div>
         </div>
       </header> */}
+=======
+      <Navbar />
+>>>>>>> e7c5538 (Navbar inconsistency fixed)
 
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
