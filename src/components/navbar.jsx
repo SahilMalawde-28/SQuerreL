@@ -3,7 +3,8 @@
 import { Button } from "./ui/Button"
 import { Bot, Menu } from "lucide-react"
 import { motion } from "framer-motion"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import squerrelLogo from "../public/squerrel_logo.png";
 
 export default function Navbar() {
   return (
@@ -13,7 +14,7 @@ export default function Navbar() {
       className="flex items-center justify-between px-6 py-4 backdrop-blur-sm border-b border-white/10"
     >
       <Link to="/" className="flex items-center space-x-2">
-        <Bot className="w-8 h-8 text-green-500" />
+        <img src={squerrelLogo} alt="SQuerrel Logo" className="w-8 h-8" />
         <span className="text-white font-medium text-xl">SQuerrel</span>
       </Link>
 

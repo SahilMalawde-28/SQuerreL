@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Bot } from "lucide-react"
+import squerrelLogo from "../public/squerrel_logo.png";
 
 export function RoboAnimation() {
   return (
@@ -30,10 +30,11 @@ export function RoboAnimation() {
               ease: "easeInOut",
             }}
           />
-          <Bot className="w-32 h-32 text-green-500" />
+          <img src={squerrelLogo} alt="SQuerrel Logo" className="w-32 h-32" />
         </div>
       </motion.div>
     </div>
   )
 }
+
 
