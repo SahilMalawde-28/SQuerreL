@@ -65,8 +65,17 @@ export default function DiagramArea({ zoom, tableData = [] }) {
 
         {table.rows && table.rows.length > 0 ? (
           <table className="w-full text-white mt-3 text-sm border border-gray-700 rounded-md overflow-hidden">
+            <thead className="bg-gray-900">
+              <tr>
+                {table.columns?.map((col, i) => (
+                  <th key={i} className="border border-gray-700 p-2 text-left font-semibold text-gray-300">
+                    {col}
+                  </th>
+                ))}
+              </tr>
+            </thead>
             <tbody>
-              {table.rows.map((row, i) => (
+              {table.rows?.map((row, i) => (
                 <tr key={i} className="bg-gray-850 hover:bg-gray-800 transition">
                   {row.map((cell, j) => (
                     <td key={j} className="border border-gray-700 p-2">{cell}</td>
@@ -75,6 +84,7 @@ export default function DiagramArea({ zoom, tableData = [] }) {
               ))}
             </tbody>
           </table>
+
         ) : (
           <p className="text-gray-400 mt-2">No Data Available</p>
         )}
