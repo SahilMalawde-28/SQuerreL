@@ -22,46 +22,53 @@ export default function CodeTab({ code, setCode, setSchemaData ,setTableData}) {
 
   // Function to determine which API to call
   const handleRun = async () => {
-    const endpoint = editedCode.trim().toLowerCase().startsWith("select")
-      ? "get-table"
-      : "execute-sql"
+  const endpoint = editedCode.trim().toLowerCase().startsWith("select")
+    ? "get-table"
+    : "execute-sql";
 
-    try {
-      const response = await fetch(`https://eventsphere-backend.vercel.app/${endpoint}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json",
-        "Accept": "application/json"},
-        body: JSON.stringify({ prompt: editedCode }),
-      })
+  try {
+    const response = await fetch(`https://eventsphere-backend.vercel.app/${endpoint}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({ prompt: editedCode }),
+    });
 
-      const data = await response.json()
+    const data = await response.json();
 
-      // ✅ If schema & table name are returned, update schema data
-      // if (data.schema && data.tableName) {
-      //   setSchemaData((prevSchema) => [
-      //     ...prevSchema,
-      //     { tableName: data.tableName, columns: data.schema }
-      //   ])
-      
-      // }
-      if (data.data && data.tableName) {
-        setTableData([
-          {
-            name: data.tableName,
-            // columns: data.columns, 
-            rows: data.data        
-          }
-        ]);
-      }
-      
-
-      alert("Query Recieved!")
-      console.log("Query Result:", data)
-    } catch (error) {
-      alert("Error: " + error.message);
-      console.error("Error executing query:", error)
+    // ✅ 1. If table data returned (SELECT)
+    if (data.data && data.columns && data.tableName) {
+      setTableData([
+        {
+          name: data.tableName,
+          columns: data.columns,
+          rows: data.data
+        }
+      ]);
     }
+
+    // ✅ 2. If schema is returned (CREATE TABLE etc.)
+    else if (data.schema && data.tableName) {
+      setSchemaData(prev => [
+        ...prev,
+        {
+          tableName: data.tableName,
+          columns: data.schema
+        }
+      ]);
+    }
+
+    // ✅ 3. Show status message
+    alert(data.message || "Query executed.");
+
+    console.log("Query Result:", data);
+  } catch (error) {
+    alert("Error: " + error.message);
+    console.error("Execution error:", error);
   }
+};
 
   return (
     <div className="p-4 w-full h-screen flex flex-col">
